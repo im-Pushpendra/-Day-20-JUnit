@@ -40,6 +40,7 @@ public class userRegistration {
 		Matcher matcher = pattern.matcher(password);
 		return matcher.matches();
 	}
+
 	public boolean password2(String password) {
 		String regex = "((?=.*[A-Z])(?=.*[0-9]).{8,})";
 		Pattern pattern = Pattern.compile(regex);
@@ -47,11 +48,18 @@ public class userRegistration {
 		return matcher.matches();
 
 	}
+
 	public boolean password3(String password) {
 		String regex = "((?=.[a-z]).{8,9})";
 		Pattern pattern = Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(password);
 		return matcher.matches();
 	}
-	
+
+	public boolean password4(String password) {
+		String regex = "((?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$-%^&*]).{8,})";
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(password);
+		return matcher.matches();
+	}
 }
