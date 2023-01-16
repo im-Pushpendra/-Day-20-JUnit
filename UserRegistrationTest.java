@@ -30,35 +30,52 @@ public class UserRegistrationTest {
 		Assert.assertEquals(false, result);
 
 	}
-	@Test
-    public void givenEmail_WhenProper_ShouldReturnTrue() {
-        boolean result = userRegistration.email("sangeetamath15@gmail.com");
-        Assert.assertEquals(true, result);
-    }
 
-    @Test
-    public void givenEmail_WhenNotProper_ShouldReturnFalse() {
-        boolean result = userRegistration.email("sangeetamath&12.com");
-        Assert.assertEquals(false, result);
-    }
-    @Test
-    public void givenPhoneNumber_WhenProper_shouldReturnTrue(){
-        boolean result=userRegistration.phoneNumber("91 9629873456");
-        Assert.assertEquals(true,result);
-    }
-    @Test
-    public void givenPhoneNumber_WhenNotProper_ShouldReturnFalse(){
-        boolean result=userRegistration.phoneNumber("919629873456");
-        Assert.assertEquals(false,result);
-    }
-    @Test
-    public void givenPassword_WhenProper_ShouldReturnTrue(){
-	 boolean result = userRegistration.password("Qwertyuiop");
-	 Assert.assertEquals(true, result);
- }
- @Test
-    public void givenPassword_WhenNotProper_ShouldReturnFalse(){
-	 boolean result = userRegistration.password("qwertyyuuiop");
-	 Assert.assertEquals(false, result);
- }
+	@Test
+	public void givenEmail_WhenProper_ShouldReturnTrue() {
+		boolean result = userRegistration.email("sangeetamath15@gmail.com");
+		Assert.assertEquals(true, result);
+	}
+
+	@Test
+	public void givenEmail_WhenNotProper_ShouldReturnFalse() {
+		boolean result = userRegistration.email("sangeetamath&12.com");
+		Assert.assertEquals(false, result);
+	}
+
+	@Test
+	public void givenPhoneNumber_WhenProper_shouldReturnTrue() {
+		boolean result = userRegistration.phoneNumber("91 9629873456");
+		Assert.assertEquals(true, result);
+	}
+
+	@Test
+	public void givenPhoneNumber_WhenNotProper_ShouldReturnFalse() {
+		boolean result = userRegistration.phoneNumber("919629873456");
+		Assert.assertEquals(false, result);
+	}
+
+	@Test
+	public void givenPassword_WhenProper_ShouldReturnTrue() {
+		boolean result = userRegistration.password("Qwertyuiop");
+		Assert.assertEquals(true, result);
+	}
+
+	@Test
+	public void givenPassword_WhenNotProper_ShouldReturnFalse() {
+		boolean result = userRegistration.password("qwertyyuuiop");
+		Assert.assertEquals(false, result);
+	}
+
+	@Test
+	public void givenPasswordRule2_WhenProper_ShouldReturnTrue() {
+		boolean result = userRegistration.password2("Qwertyu19");
+		Assert.assertEquals(true, result);
+	}
+
+	@Test
+	public void givenPasswordRule2_WhenNotProper_ShouldReturnFalse() {
+		boolean result = userRegistration.password2("qwerrty");
+		Assert.assertEquals(false, result);
+	}
 }
